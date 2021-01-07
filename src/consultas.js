@@ -1,4 +1,4 @@
-//Importa total de la venta.
+//1. Importa total de la venta.
 db.ventas.aggregate(
     [
       {
@@ -11,7 +11,7 @@ db.ventas.aggregate(
       }
     ]
  )
-//Beneficios.
+//2. Beneficios.
  db.ventas.aggregate(
     [
       {
@@ -31,7 +31,7 @@ db.ventas.aggregate(
       }
     ]
  )
-//Mejores cliente.
+//3. Mejores cliente.
 db.ventas.aggregate(
   [
     {
@@ -55,7 +55,7 @@ db.ventas.aggregate(
     }
   ]
 )
-//Mejores vendedores.
+//4. Mejores vendedores.
 db.ventas.aggregate(
   [
     {
@@ -79,7 +79,7 @@ db.ventas.aggregate(
     }
   ]
 )
-//Mejores artículos.
+//5. Mejores artículos.
 db.ventas.aggregate(
   [
     {
@@ -96,7 +96,7 @@ db.ventas.aggregate(
     },
   ]
 )
-//Mejor mes de ventas de 2020.
+//6. Mejor mes de ventas de 2020.
 db.ventas.aggregate(
   [
     {
@@ -113,7 +113,7 @@ db.ventas.aggregate(
     }
   ]
 )
-//Media de artículos vendidos al día durante el mejor mes de ventas de 2020.
+//7. Media de artículos vendidos al día durante el mejor mes de ventas de 2020.
 comiezo_nov = new Date("2020,11,01")
 final_nov = new Date("2020,11,30")
 db.ventas.aggregate(
@@ -140,7 +140,7 @@ db.ventas.aggregate(
     }
   ]
 )
-//Media de los precios de los artículos de la tienda de Enrique Lomana Menudo y Francisco García Porcelana.
+//8. Media de los precios de los artículos de la tienda de Enrique Lomana Menudo y Francisco García Porcelana.
 db.ventas.aggregate(
   [
     {
